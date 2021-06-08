@@ -1,0 +1,20 @@
+#%RAML 1.0
+title: system-healthcheck
+version: v1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/992e1e32-de77-4289-9d46-8a7c0caa7b86/api # baseUri: http://localhost:8081/api
+securitySchemes:
+  basic:
+    type: Basic Authentication
+
+/healthcheckDbDatalake:
+  displayName: Connectivity test - Return DataLake Data 
+  get:
+    description: Connectivity test - Return data from DataLake endpoint
+    queryParameters:
+      email:
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+             type: object
